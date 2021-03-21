@@ -1,5 +1,5 @@
 #!/bin/bash
 
 /bin/bash ~/suckless/scripts/dwm-status.sh &
+/bin/bash ~/suckless/scripts/dwm-wallpaper.sh &
 picom -b
-feh --randomize --bg-fill ~/some/pictures/q-qian/qian-w/*
