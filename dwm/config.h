@@ -48,6 +48,7 @@ static const Rule rules[] = {
 	{ "Firefox",		NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Chromium",		NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Lxappearance",	NULL,       NULL,       0,			  1,           -1 },
+	{ "VirtualBox",	    NULL,       NULL,       1 << 2,		  1,           -1 },
 };
 
 /* layout(s) */
@@ -106,6 +107,7 @@ static Key keys[] = {
 	//{ MODKEY|Mod1Mask,              XK_o,      incrohgaps,     {.i = -1 } },
 	//{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
 	//{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+	//{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = alterWallpaper } },
@@ -117,11 +119,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_k,      hidewin,        {0} },
+	{ MODKEY|ShiftMask,             XK_k,      restorewin,     {0} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_c,      killclient,     {0} },
