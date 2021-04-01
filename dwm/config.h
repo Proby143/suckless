@@ -36,7 +36,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "➊ ‧  ", "➋ ‧  ", "➌ ‧  ", "➍ ‧  ", "➎ ‧  ", "➏ ‧  ", "➐ ‧  ", "➑ ‧  ", "➒ ‧  " };
+static const char *tags[] = { "➊ ‧  ", "➋ ‧  ", "➌ ‧  ", "➍ ‧  ", "➎ ‧  ", "➏ ‧  ", "➐ ‧  ", "➑ ‧  ", "➒ ‧  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -44,11 +44,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class			instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",			NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",		NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Gimp",			NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "Firefox",		NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Chromium",		NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Lxappearance",	NULL,       NULL,       0,			  1,           -1 },
 	{ "VirtualBox",	    NULL,       NULL,       1 << 2,		  1,           -1 },
+	{ "retroarch",	    NULL,       NULL,       1 << 4,		  0,           -1 },
 };
 
 /* layout(s) */
