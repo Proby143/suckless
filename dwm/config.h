@@ -86,6 +86,8 @@ static const char *screenLock[] = { "/home/gin/suckless/scripts/screen-lock.sh",
 static const char *volUp[] = { "/home/gin/suckless/scripts/vol-up.sh", NULL};
 static const char *volDown[] = { "/home/gin/suckless/scripts/vol-down.sh", NULL};
 static const char *volTog[] = { "/home/gin/suckless/scripts/vol-toggle.sh", NULL};
+static const char *backLightUp[] = { "/home/gin/suckless/scripts/backlight-up.sh", NULL};
+static const char *backLightDown[] = { "/home/gin/suckless/scripts/backlight-down.sh", NULL};
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 
@@ -114,9 +116,11 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = alterWallpaper } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = screenLock } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = flameshot } },
-	{ MODKEY,                       XK_Up,     spawn,          {.v = volUp } },
-	{ MODKEY,                       XK_Down,   spawn,          {.v = volDown } },
-	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = volTog } },
+	{ MODKEY,                       XK_F6,     spawn,          {.v = volUp } },
+	{ MODKEY,                       XK_F5,     spawn,          {.v = volDown } },
+	{ MODKEY,                       XK_F4,     spawn,          {.v = volTog } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = backLightUp} },
+	{ MODKEY,                       XK_F1,     spawn,          {.v = backLightDown} },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -134,7 +138,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,					    XK_f,      togglefullscr,  {0} },
+	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
