@@ -52,6 +52,10 @@ static const Rule rules[] = {
 	{ "retroarch",	    NULL,       NULL,       1 << 4,		    0,           -1 },
 	{ "obs",	          NULL,       NULL,       1 << 5,		    0,           -1 },
 	{ "Peek",	          NULL,       NULL,       0,	    	    1,           -1 },
+	{ "flameshot",      NULL,       NULL,       0,	    	    1,           -1 },
+  { "feh",            NULL,       NULL,       0,	    	    1,           -1 },
+	{ "Gthumb",         NULL,       NULL,       0,	    	    1,           -1 },
+	{ "MPlayer",        NULL,       NULL,       0,	    	    1,           -1 },
 };
 
 /* layout(s) */
@@ -84,6 +88,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL};
 static const char *rofiRun[]  = { "rofi", "-show", "run", NULL};
 static const char *flameshot[] = { "flameshot", "gui", NULL};
+static const char *escrotum[] = { "escrotum", "-s", "-C", NULL};
 static const char *alterWallpaper[] = { "/home/gin/suckless/scripts/dwm-wallpaper.sh", NULL};
 static const char *screenLock[] = { "/home/gin/suckless/scripts/screen-lock.sh", NULL};
 static const char *volUp[] = { "/home/gin/suckless/scripts/vol-up.sh", NULL};
@@ -120,6 +125,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = alterWallpaper } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = screenLock } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = flameshot } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = escrotum } },
 	{ MODKEY,                       XK_F6,     spawn,          {.v = volUp } },
 	{ MODKEY,                       XK_F5,     spawn,          {.v = volDown } },
 	{ MODKEY,                       XK_F4,     spawn,          {.v = volTog } },
