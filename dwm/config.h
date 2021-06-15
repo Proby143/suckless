@@ -14,7 +14,7 @@ static const unsigned int gappov    = 6;       /* vert outer gap between windows
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FiraMono Nerd Font:size=16" };
+static const char *fonts[]          = { "fira code:size=16" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#d4c4d1";
 static const char col_gray2[]       = "#665879";
@@ -123,9 +123,9 @@ static Key keys[] = {
   { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = rofiRun } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = alterWallpaper } },
-	{ MODKEY,                       XK_n,      spawn,          {.v = screenLock } },
-	{ MODKEY,                       XK_s,      spawn,          {.v = flameshot } },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = escrotum } },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = screenLock } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = flameshot } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = escrotum } },
 	{ MODKEY,                       XK_F6,     spawn,          {.v = volUp } },
 	{ MODKEY,                       XK_F5,     spawn,          {.v = volDown } },
 	{ MODKEY,                       XK_F4,     spawn,          {.v = volTog } },
